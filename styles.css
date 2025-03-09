@@ -1,0 +1,526 @@
+/*
+Global styles
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4em;
+}
+
+a,
+h2,
+.card h3 {
+    color: rgb(24, 34, 97);
+    font-weight: 300;
+}
+
+a.button {
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+a.button:hover {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+    background-color: rgb(24, 34, 97);
+    color: white;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h1,
+p.about,
+h2,
+h3 {
+    font-family: "Open Sans", sans-serif;
+}
+
+blockquote,
+p {
+    ssfont-size: 1.4em;
+    line-height: 1.5;
+}
+
+.pq {
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(24, 34, 97, 0.3);
+}
+
+nav a {
+    color: rgba(24, 34, 97, 0.75);
+}
+
+a:hover,
+nav a.active {
+    border-bottom: 2px solid rgb(24, 34, 97);
+    color: rgb(24, 34, 97);
+}
+
+svg {
+    fill: rgb(24, 34, 97);
+}
+
+/*
+Specific sections
+*/
+
+header {
+    background-image: url("./images/london-skyline.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+
+    /*
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    */
+}
+
+nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    left: 0;
+    right: 0;
+    box-shadow:
+        0 2.76726px 2.21381px rgb(0 0 0 / 7%),
+        0 6.6501px 5.32008px rgb(0 0 0 / 4%),
+        0 12.5216px 10.0172px rgb(0 0 0 / 3%),
+        0 22.3363px 17.869px rgb(0 0 0 / 3%),
+        0 41.7776px 33.4221px rgb(0 0 0 / 2%),
+        0 100px 80px rgb(0 0 0 / 2%),
+        0 1px 0 0 rgb(4 13 33 / 10%);
+    text-align: center;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 120%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.intro {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-right: 10%;
+    color: white;
+    background-color: rgba(100, 100, 100, 0.25);
+    border-radius: 0em;
+}
+
+/*
+.logo { max-width: 40%; }
+*/
+
+.logo {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    width: 800px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+h1 {
+    color: rgb(24, 34, 97);
+    /*text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);*/
+}
+
+section {
+    /*
+    margin-left: 2em;
+    margin-right: 2em;
+    */
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    border-top: 1px solid #ddd;
+    padding-top: 2em;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2,
+p.about {
+    font-size: 1.4em;
+}
+
+#services h2 {
+    /*border-top: none;
+    padding-top: 0;*/
+}
+
+p.about {
+    text-align: center;
+    /*
+    scolor: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.25);
+    */
+    font-weight: 600;
+
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+p.callus {
+    margin-top: 0;
+    margin-left: 16px;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+.callus b {
+    font-size: 1.2em;
+}
+
+.card,
+#newsletter p {
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 2em;
+    padding: 20px;
+    vertical-align: top;
+}
+
+#team .card,
+#faqs .card {
+    box-shadow:
+        rgb(0 0 0 / 10%) 0px 6px 12px 0px,
+        rgb(202 202 202 / 20%) 0px 0px 6px 0px,
+        rgb(202 202 202 / 10%) 0px -1px 4px 0px;
+}
+
+/*
+
+*/
+
+#contact > div {
+    display: flex;
+    max-width: 960px;
+    margin: auto;
+}
+
+.callus {
+    /*margin-top: 2em;*/
+    color: rgb(63, 63, 63);
+}
+
+.callus svg {
+    margin-right: 0.5em;
+}
+
+#credits {
+    font-size: 80%;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+    /* 2-column cards */
+    .card {
+        display: inline-block;
+        width: 46%;
+        padding: 2%;
+    }
+
+    #team .card,
+    #faqs .card {
+        width: 44%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+
+    .intro {
+        padding-right: 0%;
+        margin-right: 40%;
+    }
+
+    /*
+    .logo {
+        max-width: 50%;
+    }
+    */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2,
+    p.about {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    section {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    section#area {
+        max-width: 1200px;
+    }
+
+    h1 {
+        font-size: 3.4em;
+    }
+
+    .card {
+        width: 29%;
+    }
+
+    .card,
+    .callus,
+    #newsletter p {
+        line-height: 1.4;
+        font-size: 1.1em;
+    }
+
+    #faqs .card {
+        width: 27%;
+    }
+
+    #credits {
+        max-width: 1200px;
+    }
+}
+
+/**
+new stuff below here
+**/
+
+.about {
+    font-weight: 900;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.testimonial {
+    margin-left: 128px;
+    margin-bottom: 60px;
+}
+
+#testimonials h2 {
+    border-top: none;
+    margin-top: 0;
+}
+
+#testimonials svg {
+    float: left;
+}
+
+.testimonial blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+mobile
+**/
+
+@media screen and (min-width: 350px) {
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    h2 {
+        margin-top: 1em;
+        padding-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h2,
+    p.about {
+        font-size: 1.3em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .hero {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .about {
+        margin-top: 1em;
+    }
+
+    nav a {
+        font-size: 70%;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+
+    .testimonial {
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+
+    #testimonials svg {
+        float: none;
+        margin: auto;
+        display: block;
+    }
+
+    .callus b {
+        font-size: 1em;
+    }
+
+    /*#contact svg {
+        width: 16px;
+        max-width: 16px;
+    }*/
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+/**
+full-screen desktop
+**/
+@media screen and (min-width: 1400px) {
+    nav a {
+        font-size: 120%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /*.hero {
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .hero img {
+        margin-top: -400px;
+        }*/
+
+    .hero {
+        height: auto;
+    }
+
+    .about {
+        margin-top: 2em;
+    }
+
+    h2,
+    p.about {
+        font-size: 2em;
+    }
+
+    h2 {
+        margin-top: 2em;
+        padding-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #services > div {
+        display: flex;
+        gap: 2em;
+    }
+
+    #services > div > div,
+    #aboutme > div > div {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    #services > div > div > p:first-child,
+    #area > div > div > p:first-child,
+    #aboutme > div > div > p:first-child {
+        margin-top: 0;
+    }
+
+    #services > div > img {
+        flex: 50%;
+        width: 100px;
+        display: block;
+    }
+
+    #area > div {
+        display: flex;
+        gap: 2em;
+    }
+    #area > div > img {
+        width: 600px;
+        flex: 50%;
+        max-width: 600px;
+    }
+    #area > div > div {
+        flex: 50%;
+    }
+
+    #aboutme {
+        clear: both;
+    }
+
+    #aboutme > div {
+        display: flex;
+        gap: 2em;
+    }
+
+    #aboutme > div > div {
+        flex: 50%;
+    }
+
+    #aboutme > div > img {
+        display: block;
+        flex: 50%;
+        max-width: 50%;
+        smargin: -1em auto 3em;
+    }
+
+    .callus b {
+        font-size: 1.2em;
+    }
+
+    #contact svg {
+        width: 32px;
+        max-width: 32px;
+    }
+
+    #testimonials svg {
+        float: left;
+    }
+
+    .testimonial {
+        margin-left: 128px;
+    }
+}
